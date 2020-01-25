@@ -17,7 +17,7 @@ public class AccountHolder {
 	}
 	public void monthlyInterest()
 	{
-		
+		balance += balance * (annualInterestRate/12.0);
 	}
 	/* Accept balance arg, to boost (update) 
 	 * the current balance
