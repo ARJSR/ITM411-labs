@@ -22,7 +22,8 @@ public class AccountHolderTest {
         //or I could list them seperately while calling the objects from the
         //AHClass
         
-        
+        //start out with a menu with a choice to "Deposit", "Withdrawal",  
+        //"View Balance", or "Exit"
         
         System.out.println("Balance = " + ah1.getBalance());
         
