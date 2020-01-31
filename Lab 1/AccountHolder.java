@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 
 public class AccountHolder {
 // instance fields
@@ -9,6 +10,14 @@ public class AccountHolder {
 		//set member field to starter value
 		balance = bal < 0 ? 0: bal; //CEO Conditional Expression Officer
 	}
+	//create a menu for user selection
+	public getMenu()
+		Scanner input = new Scanner(System.in);
+		input = input. =! 'N' ?
+		JOptionPane.showInputDialog("Select 1: To view Balance/n" +
+									"Select 2: To make a Deposit/n" +
+									"Select 3: To make a Withdrawal/n" +
+									"Press any key to exit"
 	public double getBalance() {
 		return balance;
 	}
