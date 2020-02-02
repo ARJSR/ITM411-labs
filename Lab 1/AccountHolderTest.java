@@ -25,6 +25,7 @@ public class AccountHolderTest {
 
         }   
           	Scanner input = new Scanner(System.in);
+          	System.out.println("");
     		System.out.println("Would you like to access the bank menu?");
     		
     		System.out.println("Select B To view Balance");
@@ -38,12 +39,16 @@ public class AccountHolderTest {
     		switch (Selection)
     		{
     			case "B":  
-    				System.out.println("Your balance is" + balance);
+    				System.out.println("Your balance is: " + balance);
     			break;
     			case "D":
+    				System.out.println("How much would you like to deposit?");
+    				balance = input.nextDouble();
     				ah1.deposit(balance);
     			break;
     			case "W":
+    				System.out.println("How much would you like to withdraw?");
+    				balance = input.nextDouble();
     				ah1.withdrawal(balance);
     			break;
     			case "Exit":
