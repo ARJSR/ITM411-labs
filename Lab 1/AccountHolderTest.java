@@ -1,29 +1,29 @@
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-
-import javax.swing.JOptionPane;
-
+//Author Antonio Jackson
 public class AccountHolderTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        Scanner sc= new Scanner(System.in);
+        Scanner sc= new Scanner(System.in); //lost
         double balance = 0;
        
         //start an object and access data for static fields
         
-        AccountHolder.annualInterestRate = .04;
-        AccountHolder ah1 = new AccountHolder(); 
+        //AccountHolder.annualInterestRate = .04;
+        AccountHolder ah1 = new AccountHolder(balance); 
         
         //Get balance from user
         while (true) {
-        		balance = JOptionPane.showInputDialog("What is your initial balance?)
+        		//balance = JOptionPane.showInputDialog("What is your initial balance?");
+        	System.out.println("What is your initial balance");
+        	balance = sc.nextDouble();
         	  if (balance < 0)
                  System.out.println("Pls. reenter a positive beginning balance");
         	  else ah1.setBalance(balance);
               break;
 
-              
+        }   
           	Scanner input = new Scanner(System.in);
     		System.out.println("Would you like to access the bank menu?");
     		
@@ -41,7 +41,13 @@ public class AccountHolderTest {
     				System.out.println("Your balance is" + balance);
     			break;
     			case "D":
-    				deposit;
+    				ah1.deposit(balance);
+    			break;
+    			case "W":
+    				ah1.withdrawal(balance);
+    			break;
+    			case "Exit":
+    				System.out.println("Thank you, have a great day");
     		}
     		      
               
