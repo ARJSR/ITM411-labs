@@ -23,7 +23,29 @@ public class AccountHolderTest {
         	  else ah1.setBalance(balance);
               break;
 
-        ah1.getMenu();     
+              
+          	Scanner input = new Scanner(System.in);
+    		System.out.println("Would you like to access the bank menu?");
+    		
+    		System.out.println("Select B To view Balance");
+    		System.out.println("Select D: To make a Deposit");
+    		System.out.println("Select W: To make a Withdrawal");
+    		System.out.println("Type Exit ");//: input = "Have a great day";
+    			
+    		String Selection = input.next();
+    		Selection = Selection.toUpperCase();
+    		
+    		switch (Selection)
+    		{
+    			case "B":  
+    				System.out.println("Your balance is" + balance);
+    			break;
+    			case "D":
+    				deposit;
+    		}
+    		      
+              
+        //ah1.getMenu();     
         
         //I could use a switch statement for the withdrawal and deposit info
         //or I could list them seperately while calling the objects from the
