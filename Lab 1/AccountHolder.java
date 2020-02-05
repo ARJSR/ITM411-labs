@@ -5,24 +5,35 @@ import java.util.Scanner;
 public class AccountHolder {
 // instance fields
 	private double balance;
-	private static double annualInterestRate;
+	private static double annualInterestRate = .4;
 	
 	public AccountHolder(double bal) {
 		// TODO Auto-generated constructor stub
 		//set member field to starter value
+		this.balance = bal;
 		balance = bal < 0 ? 0: bal; //CEO Conditional Expression Officer
 	}
-	//create a menu for user selection
-
+		
+	public void setBalance(double bal) {
+		balance = bal;
+	}
 	public double getBalance() {
+		//annualInterestRate = annualInterestRate/12;
+		
+		//balance += balance;
+		if (balance < 50)
+			System.out.println("Can not withraw less than $50\n"
+					+ "from your bank account!");
+				
+		
+		//else
+			//balance = balance;
 		return balance;
 	}
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
-	public void monthlyInterest()
+	public double monthlyInterest()
 	{
-		balance += balance * (getAnnualInterestRate()/12.0);
+		balance += balance * annualInterestRate/12.0;
+		return balance;
 	}
 	/* Accept balance arg, to boost (update) 
 	 * the current balance
@@ -40,20 +51,25 @@ public class AccountHolder {
 	  // and update the reduction and verify 
 		
 		balance -= bal;
-		if (bal < 50)
-			System.out.println("Can not withraw less than $50"
-					+ "from your bank account!");
-		else
-			balance = bal;
+		{
+		//if (bal < 50)
+			//System.out.println("Can not withraw less than $50"
+				//	+ "from your bank account!");
+		//else
+			//balance = bal;
+		}
+	}
+	public void setAnnualInterestRate(double annualInterestRate) {
+	       AccountHolder.annualInterestRate = .04;
+				//this.annualInterestRate = annualInterestRate;
+	}
+	 public static double getMonthlyInterestRate() {
 		
+		 annualInterestRate = annualInterestRate/12;
+		 return annualInterestRate;
 	}
-	public static double getAnnualInterestRate() {
-		return annualInterestRate;
-	}
-	public static void setAnnualInterestRate(double annualInterestRate) {
-		AccountHolder.annualInterestRate = annualInterestRate;
-	}
+	
 	
 
 
-}
+	}
