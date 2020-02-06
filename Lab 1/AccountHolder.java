@@ -19,14 +19,14 @@ public class AccountHolder {
 	}
 	public double getBalance() {
 		//annualInterestRate = annualInterestRate/12;
-		
+		if (balance < 50.0)
+            throw new IllegalArgumentException("Account cannot be less than $50!");
+
 		//balance += balance;
-		if (balance < 50)
-			System.out.println("Can not withraw less than $50\n"
-					+ "from your bank account!");
-				
-		
-		//else
+		//if (balance < 50)
+			//System.out.println("Account cannot be less than $50!");
+		  	//System.exit(0);
+		   
 			//balance = balance;
 		return balance;
 	}
@@ -50,14 +50,14 @@ public class AccountHolder {
 	{ // check current balance with local value
 	  // and update the reduction and verify 
 		
-		balance -= bal;
-		{
+		//balance -= bal;
+		getBalance();
 		//if (bal < 50)
 			//System.out.println("Can not withraw less than $50"
 				//	+ "from your bank account!");
 		//else
-			//balance = bal;
-		}
+			balance -= bal;
+		
 	}
 	public void setAnnualInterestRate(double annualInterestRate) {
 	       AccountHolder.annualInterestRate = .04;

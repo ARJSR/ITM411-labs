@@ -29,9 +29,13 @@ public class AccountHolderTest {
         	  	 //balance = sc.nextDouble();
         	  ah1.setBalance(balance);
         	  //break;
-        
+        	  
+        	
+      		
+        	{
            	System.out.println("");
-        	Scanner input = new Scanner(System.in);
+        	
+           	Scanner input = new Scanner(System.in);
     		System.out.println("Would you like to access the bank menu?");
     		
     		System.out.println("");
@@ -43,6 +47,7 @@ public class AccountHolderTest {
     			
     		String Selection = input.next();
     		Selection = Selection.toUpperCase();
+        	 //}while(!"Exit".equals(Selection));
     		
     		switch (Selection)
     		{
@@ -67,7 +72,9 @@ public class AccountHolderTest {
     			case "Exit":
     				System.out.println("Thank you, have a great day");
     		}
-    		  
+        	  //while(!"Exit".equals(Selection));
+        	 
+        	  
         //ah1.getMenu();     
         
         //I could use a switch statement for the withdrawal and deposit info
@@ -88,7 +95,9 @@ public class AccountHolderTest {
         System.out.format("%-10s%n","Monthly Balance \n" + "With Interest Rate");
         //System.out.println("Ending Monthly Balance");
         System.out.printf("$%.2f", ah1.monthlyInterest());
-      
-	}
-
+        	 
+        	 }
+        	
+        	 
+}
 }
